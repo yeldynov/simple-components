@@ -3,3 +3,8 @@ export interface AccordionItem {
   label: string;
   content: string;
 }
+
+export interface DropdownOption {
+  label: string;
+  value: string;
+}

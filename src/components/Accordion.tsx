@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AccordionItem } from '../types';
 import { BiLeftArrow, BiDownArrow } from 'react-icons/bi';
+
 type Props = {
   items: AccordionItem[];
 };

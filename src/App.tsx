@@ -1,32 +1,32 @@
-import ButtonPage from './pages/ButtonPage';
-import Accordion from './components/Accordion';
-import { AccordionItem } from './types';
+import { useState } from 'react';
+import Dropdown from './components/Dropdown';
+import { DropdownOption } from './types';
 
 function App() {
-  const items: AccordionItem[] = [
+  const [selected, setSelected] = useState<DropdownOption | null>(null);
+
+  const handleSelect = (option: DropdownOption) => {
+    setSelected(option);
+  };
+
+  const options: DropdownOption[] = [
     {
-      id: 'l23lsc',
-      label: 'Can I use React on a project?',
-      content:
-        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
+      label: 'Red',
+      value: 'red',
     },
     {
-      id: 'c2wsc',
-      label: 'Can I use Javascript on a project?',
-      content:
-        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
+      label: 'Green',
+      value: 'green',
     },
     {
-      id: 'jasd33',
-      label: 'Can I use CSS on a project?',
-      content:
-        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
+      label: 'Blue',
+      value: 'blue',
     },
   ];
 
   return (
     <div className='m-5'>
-      <Accordion items={items} />
+      <Dropdown onChange={handleSelect} value={selected} options={options} />
     </div>
   );
 }

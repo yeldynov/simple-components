@@ -5,9 +5,6 @@ import Button from '../components/Button';
 function ButtonPage() {
   return (
     <div className='m-5'>
-      <h1 className='text-3xl border mb-4 text-center font-bold uppercase p-2'>
-        Buttons
-      </h1>
       <div>
         <Button secondary rounded className='mb-5'>
           <GoBell />

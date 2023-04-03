@@ -15,7 +15,7 @@ type Action =
   | { type: 'INCREMENT' }
   | { type: 'DECREMENT' }
   | { type: 'CHANGE_VALUE_TO_ADD'; payload: number }
-  | { type: 'ADD_VALUE'; payload: number }
+  // | { type: 'ADD_VALUE'; payload: number }
   | { type: 'ADD_VALUE_TO_COUNT' };
 
 const reducer = (state: State, action: Action) => {
@@ -36,11 +36,11 @@ const reducer = (state: State, action: Action) => {
         ...state,
         valueToAdd: action.payload,
       };
-    case 'ADD_VALUE':
-      return {
-        ...state,
-        count: state.count + action.payload,
-      };
+    // case 'ADD_VALUE':
+    //   return {
+    //     ...state,
+    //     count: state.count + action.payload,
+    //   };
     case 'ADD_VALUE_TO_COUNT':
       return {
         ...state,
